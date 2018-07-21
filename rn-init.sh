@@ -1,6 +1,8 @@
 #!/bin/sh
+cd ..
 PROJECT_NAME="$1"
-react-native init ../$PROJECT_NAME
+react-native init $PROJECT_NAME
+cd $PROJECT_NAME
 git init
 echo -e package-lock.json >> .gitignore
 echo -e yarn.lock >> .gitignore
